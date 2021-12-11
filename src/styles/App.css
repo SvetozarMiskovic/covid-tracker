@@ -1,0 +1,11 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #b5b893;
+  color: #0779e4;
+}
