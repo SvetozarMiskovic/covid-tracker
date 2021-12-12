@@ -3,7 +3,7 @@ import '../styles/Information.css';
 function Information() {
   return (
     <div className="holder">
-      <h2 className="country-display">PLEASE WRITE A COUNTRY</h2>
+      <h2 className="country-display">No specified country!</h2>
       <div className="information-box">
         <div className="confirmed">
           <h2>Number of confirmed cases</h2>

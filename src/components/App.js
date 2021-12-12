@@ -23,7 +23,7 @@ function App() {
         })
         .then(res => {
           data = res[res.length - 1];
-          console.log(data);
+
           if (data) {
             country.textContent = data.Country;
             deaths.textContent = data.Deaths.toLocaleString();
