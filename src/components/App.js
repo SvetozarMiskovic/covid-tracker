@@ -26,9 +26,9 @@ function App() {
           console.log(data);
           if (data) {
             country.textContent = data.Country;
-            deaths.textContent = data.Deaths;
-            active.textContent = data.Active;
-            confirmed.textContent = data.Confirmed;
+            deaths.textContent = data.Deaths.toLocaleString();
+            active.textContent = data.Active.toLocaleString();
+            confirmed.textContent = data.Confirmed.toLocaleString();
           }
         })
         .catch(error => {
