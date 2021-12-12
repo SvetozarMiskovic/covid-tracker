@@ -23,14 +23,15 @@ input[type='text'] {
   border: 1px solid black;
   outline: none;
   border-radius: 0.3rem;
-  background-color: #0779e4;
-  color: white;
+  background-color: #6c4343;
+  color: #fddf97;
   height: 1.7rem;
   font-size: 1.1rem;
+  font-family: inherit;
 }
 
 input[type='text']::placeholder {
-  color: white;
+  color: #fddf97;
 }
 
 input[type='submit'] {
@@ -38,16 +39,16 @@ input[type='submit'] {
   width: 10rem;
   height: 2rem;
   cursor: pointer;
-  background-color: #0779e4;
+  background-color: #6c4343;
   outline: none;
   border: none;
   border-radius: 0.3rem;
-  color: white;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #fddf97;
+  font-family: inherit;
   letter-spacing: 0.13rem;
 }
 
 input[type='submit']:hover {
-  background-color: #4cbbb9;
-  color: white;
+  background-color: #fddf97;
+  color: #6c4343;
 }

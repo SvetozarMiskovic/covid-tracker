@@ -1,0 +1,32 @@
+.holder {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px black solid;
+
+  padding-bottom: 1rem;
+}
+h4 {
+  letter-spacing: 0.22rem;
+  font-size: 1.4rem;
+}
+.information-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.information-box > * {
+  margin: 1rem;
+  border: 1px black solid;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background-color: #6c4343;
+}
+
+.country-display {
+  font-size: 2.5rem;
+  margin: 0.6rem;
+}
+
+.information-box > h4 {
+  letter-spacing: 15rem;
+}
