@@ -23,11 +23,10 @@ function Form(props) {
           value="Get Data!"
           onClick={e => {
             e.preventDefault();
-            const country = document.querySelector('.country-display');
-            const deaths = document.querySelector('.death-cases');
-            const active = document.querySelector('.active-cases');
-            const confirmed = document.querySelector('.confirmed-cases');
-            props.getData(props.inputText, country, deaths, active, confirmed);
+
+            props.getData(props.inputText);
+            props.setInputText('');
+            document.querySelector('input[type="text"]').value = '';
           }}
         ></input>
       </form>

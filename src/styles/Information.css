@@ -1,7 +1,7 @@
 .holder {
   display: flex;
   flex-direction: column;
-  border-top: 1px black solid;
+  border-top: 1px #fddf97 solid;
 
   padding-bottom: 1rem;
 }

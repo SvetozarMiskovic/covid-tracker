@@ -4,11 +4,16 @@ import Form from './Form';
 import Information from './Information';
 function App() {
   const [inputText, setInput] = useState('');
-
+  const [info, setInfo] = useState({
+    country: 'Please specify a country!',
+    confirmed: 0,
+    active: 0,
+    deaths: 0,
+  });
   function setInputHandler(value) {
     setInput(value.toLowerCase());
   }
-  function getDataHandler(inputText, country, deaths, active, confirmed) {
+  function getDataHandler(inputText) {
     let data;
     const input = inputText;
     const url = 'https://api.covid19api.com/total/dayone/country/' + input;
@@ -25,14 +30,17 @@ function App() {
           data = res[res.length - 1];
 
           if (data) {
-            country.textContent = data.Country;
-            deaths.textContent = data.Deaths.toLocaleString();
-            active.textContent = data.Active.toLocaleString();
-            confirmed.textContent = data.Confirmed.toLocaleString();
+            setInfo({
+              country: data.Country,
+              confirmed: data.Confirmed.toLocaleString(),
+              active: data.Active.toLocaleString(),
+              deaths: data.Deaths.toLocaleString(),
+            });
           }
         })
         .catch(error => {
           console.log(error);
+          alert('Please enter a valid country!');
         });
     }
   }
@@ -44,7 +52,7 @@ function App() {
         inputText={inputText}
         setInputText={setInputHandler}
       />
-      <Information />
+      <Information info={info} />
     </div>
   );
 }
