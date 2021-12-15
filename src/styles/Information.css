@@ -16,7 +16,7 @@ h4 {
 }
 .information-box > * {
   margin: 1rem;
-  border: 1px black solid;
+  border: 1px #fddf97 solid;
   padding: 1rem;
   border-radius: 1.5rem;
   background-color: #6c4343;

@@ -10,6 +10,18 @@ function App() {
     active: 0,
     deaths: 0,
   });
+  const [sugCountries, setSugCountries] = useState([]);
+  const [open, setOpen] = useState(false);
+
+  function getCountriesOnStart() {
+    fetch('https://api.covid19api.com/countries')
+      .then(res => res.json())
+      .then(data => {
+        const sugData = data.slice(25, 33);
+        setSugCountries([...sugData]);
+      });
+  }
+
   function setInputHandler(value) {
     setInput(value.toLowerCase());
   }
@@ -44,15 +56,35 @@ function App() {
         });
     }
   }
+  function searchTexthandler(value) {
+    fetch('https://api.covid19api.com/countries')
+      .then(res => res.json())
+      .then(data => {
+        let filtered = data.filter(d => {
+          if (value.length === 0) {
+            let filtered = [];
+          } else {
+            const regex = new RegExp(`^${value}`, 'gi');
 
+            return d.Country.match(regex);
+          }
+        });
+        setSugCountries([...filtered]);
+      });
+  }
   return (
     <div className="App">
       <Form
         getData={getDataHandler}
         inputText={inputText}
         setInputText={setInputHandler}
+        sugCountries={sugCountries}
+        getCountriesOnStart={getCountriesOnStart}
+        open={open}
+        setOpen={setOpen}
+        searchText={searchTexthandler}
       />
-      <Information info={info} />
+      <Information setOpen={setOpen} info={info} />
     </div>
   );
 }

@@ -5,22 +5,21 @@
   transform: translateX(-50%);
 }
 form {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 2rem;
 }
 
-form > * {
-  margin-bottom: 1.3rem;
-}
 label {
   margin-top: 1rem;
+  margin-bottom: 1.3rem;
 }
 input[type='text'] {
   width: 25%;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid #fddf97;
   outline: none;
   border-radius: 0.3rem;
   background-color: #6c4343;
@@ -46,9 +45,44 @@ input[type='submit'] {
   color: #fddf97;
   font-family: inherit;
   letter-spacing: 0.13rem;
+  border: 1px solid #fddf97;
+  transition: 0.2s ease-out;
+  margin-bottom: 1.3rem;
+  margin-top: 1.3rem;
 }
 
 input[type='submit']:hover {
   background-color: #fddf97;
+  transition: 0.2s ease-in;
   color: #6c4343;
+}
+
+.results {
+  position: absolute;
+  width: 24%;
+  background-color: #6c4343;
+  border-radius: 0.3rem;
+
+  margin: 0;
+  top: 60%;
+
+  border: 1px solid #fddf97;
+  padding: 0.5rem;
+}
+ul {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.results div {
+  font-size: 1rem;
+  border-bottom: 1px solid #fddf97;
+  width: 100%;
+  padding: 0.3rem 0 0.3rem 0;
+  cursor: pointer;
+}
+
+.results div:hover {
+  background-color: #364968;
 }
