@@ -98,7 +98,6 @@ function App() {
               open={open}
               setOpen={setOpen}
               searchText={searchTexthandler}
-              
             />,
             <Information key={'covidTracker2'} setOpen={setOpen} info={info} />,
           ]}

@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 function Nav() {
   return (
     <nav>
-      <h2>MultiApp</h2>
+      <h2>
+        <span>Multi</span>App
+      </h2>
       <ul className="home-list">
         <li>
           <Link to="/multi-app">Home</Link>

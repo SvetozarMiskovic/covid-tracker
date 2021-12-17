@@ -7,7 +7,9 @@
   justify-content: space-around;
   align-items: center;
 }
-
+nav h2 span {
+  color: rgb(162, 212, 82);
+}
 .home-list {
   list-style: none;
   display: flex;
@@ -24,5 +26,5 @@ a {
 }
 
 .home-list a:hover {
-  color: rgb(216, 216, 216);
+  color: rgb(162, 212, 82);
 }

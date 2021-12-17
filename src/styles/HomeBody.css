@@ -1,0 +1,14 @@
+.home-body {
+  max-width: 1168px;
+  background-color: #364968;
+  border-radius: 0.3rem;
+  padding: 1rem;
+}
+
+h2 span {
+  color: rgb(162, 212, 82);
+}
+
+h4 {
+  text-align: center;
+}
