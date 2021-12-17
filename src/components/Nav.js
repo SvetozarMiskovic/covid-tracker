@@ -8,7 +8,7 @@ function Nav() {
       </h2>
       <ul className="home-list">
         <li>
-          <Link to="/multi-app">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="multi-app/covid-tracker">COVID Tracker</Link>

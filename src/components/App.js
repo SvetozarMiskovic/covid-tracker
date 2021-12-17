@@ -83,7 +83,7 @@ function App() {
     <div className="App">
       <Home />
       <Routes>
-        <Route path="/multi-app" element={<HomeBody />} />
+        <Route path="/" element={<HomeBody />} />
 
         <Route
           path="multi-app/covid-tracker"
