@@ -18,7 +18,6 @@ function App() {
   });
   const [sugCountries, setSugCountries] = useState([]);
   const [open, setOpen] = useState(false);
-  const [home, setHome] = useState(true);
 
   function getCountriesOnStart() {
     fetch('https://api.covid19api.com/countries')
