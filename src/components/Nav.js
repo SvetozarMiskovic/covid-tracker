@@ -6,13 +6,13 @@ function Nav() {
       <h2>MultiApp</h2>
       <ul className="home-list">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/multi-app">Home</Link>
         </li>
         <li>
-          <Link to="/covid-tracker">COVID Tracker</Link>
+          <Link to="multi-app/covid-tracker">COVID Tracker</Link>
         </li>
         <li>
-          <Link to="/todo-app">Todo App</Link>
+          <Link to="multi-app/todo-app">Todo App</Link>
         </li>
       </ul>
     </nav>

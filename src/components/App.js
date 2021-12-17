@@ -6,6 +6,7 @@ import TodoApp from './react_todo_main/src/components/TodoApp';
 import Form from './Form';
 import Home from './Home';
 import Information from './Information';
+import HomeBody from './HomeBody';
 
 function App() {
   const [inputText, setInput] = useState('');
@@ -17,6 +18,7 @@ function App() {
   });
   const [sugCountries, setSugCountries] = useState([]);
   const [open, setOpen] = useState(false);
+  const [home, setHome] = useState(true);
 
   function getCountriesOnStart() {
     fetch('https://api.covid19api.com/countries')
@@ -81,8 +83,10 @@ function App() {
     <div className="App">
       <Home />
       <Routes>
+        <Route path="/multi-app" element={<HomeBody />} />
+
         <Route
-          path="/covid-tracker"
+          path="multi-app/covid-tracker"
           element={[
             <Form
               key={'covidTracker'}
@@ -94,11 +98,12 @@ function App() {
               open={open}
               setOpen={setOpen}
               searchText={searchTexthandler}
+              
             />,
             <Information key={'covidTracker2'} setOpen={setOpen} info={info} />,
           ]}
         />
-        <Route path="/todo-app" element={<TodoApp />} />
+        <Route path="multi-app/todo-app" element={<TodoApp />} />
       </Routes>
     </div>
   );

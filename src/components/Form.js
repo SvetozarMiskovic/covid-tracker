@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/Form.css';
+
 function Form(props) {
   return (
     <div id="input">

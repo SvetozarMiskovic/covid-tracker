@@ -1,6 +1,6 @@
 {
-  "homepage": "https://svetozarmiskovic.github.io/covid-tracker",
-  "name": "covid-tracker",
+  "homepage": "https://svetozarmiskovic.github.io/multi-app",
+  "name": "multi-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
