@@ -1,0 +1,28 @@
+.homepage nav {
+  margin-bottom: 2rem;
+  background-color: #364968;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home-list {
+  list-style: none;
+  display: flex;
+}
+
+.home-list > li {
+  margin-right: 2rem;
+  font-size: 1.3rem;
+}
+a {
+  text-decoration: none;
+  color: #fddf97;
+  font-weight: bold;
+}
+
+.home-list a:hover {
+  color: rgb(216, 216, 216);
+}

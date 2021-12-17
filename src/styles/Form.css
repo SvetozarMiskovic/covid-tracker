@@ -3,6 +3,10 @@
   max-width: 1168px;
   left: 50%;
   transform: translateX(-50%);
+  background-color: #364968;
+  border-radius: 3rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 form {
   position: relative;
@@ -16,7 +20,7 @@ label {
   margin-top: 1rem;
   margin-bottom: 1.3rem;
 }
-input[type='text'] {
+.text-field {
   width: 25%;
   text-align: center;
   border: 1px solid #fddf97;
@@ -29,11 +33,11 @@ input[type='text'] {
   font-family: inherit;
 }
 
-input[type='text']::placeholder {
+.text-field::placeholder {
   color: #fddf97;
 }
 
-input[type='submit'] {
+.submit-input {
   font-size: 1rem;
   width: 10rem;
   height: 2rem;
@@ -51,7 +55,7 @@ input[type='submit'] {
   margin-top: 1.3rem;
 }
 
-input[type='submit']:hover {
+.submit-input:hover {
   background-color: #fddf97;
   transition: 0.2s ease-in;
   color: #6c4343;
@@ -69,7 +73,7 @@ input[type='submit']:hover {
   border: 1px solid #fddf97;
   padding: 0.5rem;
 }
-ul {
+.results .result-list {
   text-align: left;
   list-style: none;
   padding: 0;

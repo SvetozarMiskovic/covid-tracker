@@ -8,6 +8,7 @@ function Form(props) {
           Please write the country you want stats for!
         </label>
         <input
+          className="text-field"
           onInput={e => {
             const value = e.target.value;
             props.searchText(value);
@@ -34,7 +35,7 @@ function Form(props) {
               props.setOpen(false);
             }}
           >
-            <ul>
+            <ul className="result-list">
               {props.sugCountries.map(country => {
                 return (
                   <div
@@ -66,6 +67,7 @@ function Form(props) {
             document.querySelector('input[type="text"]').value = '';
             props.setOpen(false);
           }}
+          className="submit-input"
         ></input>
       </form>
     </div>

@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+
 import '../styles/App.css';
+import TodoApp from './react_todo_main/src/components/TodoApp';
 import Form from './Form';
+import Home from './Home';
 import Information from './Information';
+
 function App() {
   const [inputText, setInput] = useState('');
   const [info, setInfo] = useState({
@@ -61,7 +66,7 @@ function App() {
       .then(res => res.json())
       .then(data => {
         let filtered = data.filter(d => {
-          if (value.length === 0) {
+          if (!value) {
             let filtered = [];
           } else {
             const regex = new RegExp(`^${value}`, 'gi');
@@ -74,17 +79,27 @@ function App() {
   }
   return (
     <div className="App">
-      <Form
-        getData={getDataHandler}
-        inputText={inputText}
-        setInputText={setInputHandler}
-        sugCountries={sugCountries}
-        getCountriesOnStart={getCountriesOnStart}
-        open={open}
-        setOpen={setOpen}
-        searchText={searchTexthandler}
-      />
-      <Information setOpen={setOpen} info={info} />
+      <Home />
+      <Routes>
+        <Route
+          path="/covid-tracker"
+          element={[
+            <Form
+              key={'covidTracker'}
+              getData={getDataHandler}
+              inputText={inputText}
+              setInputText={setInputHandler}
+              sugCountries={sugCountries}
+              getCountriesOnStart={getCountriesOnStart}
+              open={open}
+              setOpen={setOpen}
+              searchText={searchTexthandler}
+            />,
+            <Information key={'covidTracker2'} setOpen={setOpen} info={info} />,
+          ]}
+        />
+        <Route path="/todo-app" element={<TodoApp />} />
+      </Routes>
     </div>
   );
 }
