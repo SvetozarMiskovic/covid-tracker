@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
+import Compare from './Compare';
 import '../styles/App.css';
 import TodoApp from './react_todo_main/src/components/TodoApp';
 import Form from './Form';
@@ -99,6 +100,12 @@ function App() {
               searchText={searchTexthandler}
             />,
             <Information key={'covidTracker2'} setOpen={setOpen} info={info} />,
+            <Compare
+              key={'compare'}
+              getCountriesOnStart={getCountriesOnStart}
+              sugCountries={sugCountries}
+              searchText={searchTexthandler}
+            />,
           ]}
         />
         <Route path="multi-app/todo-app" element={<TodoApp />} />

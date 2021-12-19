@@ -1,0 +1,39 @@
+.compare-results {
+  width: 50%;
+  display: flex;
+  position: relative;
+
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.compare-country-summary {
+  display: flex;
+  height: 50%;
+  gap: 4rem;
+  align-self: center;
+  position: relative;
+  border-bottom: 1px black solid;
+  padding-top: 1rem;
+}
+.first-country,
+.second-country {
+}
+.first-country > *,
+.second-country > * {
+  margin: 0;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.compare-conclusion {
+  align-self: center;
+  text-align: center;
+}
+
+.first-country-name,
+.second-country-name {
+  font-size: 1rem;
+}

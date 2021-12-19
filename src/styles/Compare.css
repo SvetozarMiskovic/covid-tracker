@@ -1,0 +1,10 @@
+.compare-holder {
+  margin-top: 1.5em;
+  max-width: 1168px;
+  background-color: #364968;
+  border-radius: 3rem;
+
+  display: flex;
+
+  position: relative;
+}

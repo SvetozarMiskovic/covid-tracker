@@ -1,0 +1,85 @@
+.compare-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-right: 1px black solid;
+  width: 50%;
+  position: relative;
+}
+
+.compare-btn {
+  width: 20%;
+  align-self: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+
+  height: 2rem;
+  cursor: pointer;
+  background-color: #6c4343;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  color: #fddf97;
+  font-family: inherit;
+
+  border: 1px solid #fddf97;
+  transition: 0.2s ease-out;
+}
+
+.compare-btn:hover {
+  background-color: #fddf97;
+  transition: 0.2s ease-in;
+  color: #6c4343;
+}
+#compare-input-1,
+#compare-input-2 {
+  width: 50%;
+  text-align: center;
+  border-radius: 0.3rem;
+  outline: none;
+
+  border: 1px solid #fddf97;
+
+  border-radius: 0.3rem;
+  background-color: #6c4343;
+  color: #fddf97;
+  height: 1.7rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+}
+
+.compare-input-title {
+  margin: 1rem;
+  letter-spacing: 0;
+}
+.suggestion-box-1 div,
+.suggestion-box-2 div {
+  font-size: 1rem;
+  border-bottom: 1px solid #fddf97;
+  width: 100%;
+  padding: 0.3rem 0 0.3rem 0;
+  cursor: pointer;
+}
+.suggestion-box-1,
+.suggestion-box-2 {
+  position: absolute;
+  width: 48%;
+  background-color: #6c4343;
+  border-radius: 0.3rem;
+
+  margin: 0;
+  left: 24.3%;
+  border: 1px solid #fddf97;
+  padding: 0.5rem;
+}
+
+.compare-search-result-1 > div:hover,
+.compare-search-result-2 > div:hover {
+  background-color: #364968;
+}
+.compare-search-result-1,
+.compare-search-result-2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
