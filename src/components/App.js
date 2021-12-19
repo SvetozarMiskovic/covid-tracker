@@ -101,7 +101,7 @@ function App() {
             />,
             <Information key={'covidTracker2'} setOpen={setOpen} info={info} />,
             <Compare
-              key={'compare'}
+              key={'compareCountries'}
               getCountriesOnStart={getCountriesOnStart}
               sugCountries={sugCountries}
               searchText={searchTexthandler}

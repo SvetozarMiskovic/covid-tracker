@@ -1,30 +1,34 @@
 import React from 'react';
+
 import '../styles/CompareResults.css';
 
 function CompareResults(props) {
   function convertAndSetString(info1, info2) {
-    const confirmed = parseInt(info1.confirmed.replace(/\D/g, ''));
-    const active = parseInt(info1.active.replace(/\D/g, ''));
-    const deaths = parseInt(info1.deaths.replace(/\D/g, ''));
+    const confirmed = parseInt(info1.confirmed?.replace(/\D/g, ''));
+    const active = parseInt(info1.active?.replace(/\D/g, ''));
+    const deaths = parseInt(info1.deaths?.replace(/\D/g, ''));
 
-    const confirmed2 = parseInt(info2.confirmed.replace(/\D/g, ''));
-    const active2 = parseInt(info2.active.replace(/\D/g, ''));
-    const deaths2 = parseInt(info2.deaths.replace(/\D/g, ''));
+    const confirmed2 = parseInt(info2.confirmed?.replace(/\D/g, ''));
+    const active2 = parseInt(info2.active?.replace(/\D/g, ''));
+    const deaths2 = parseInt(info2.deaths?.replace(/\D/g, ''));
 
-    return `
+    if ((confirmed, confirmed2, active, active2, deaths, deaths2)) {
+      return `
     
       Currently, ${
         confirmed > confirmed2 ? info1.country : info2.country
       } has worse statistics as it has ${
-      confirmed > confirmed2 ? confirmed - confirmed2 : confirmed2 - confirmed
-    } more confirmed cases, ${
-      active > active2 ? active - active2 : active2 - active
-    } more active cases and ${
-      deaths > deaths2 ? deaths - deaths2 : deaths2 - deaths
-    } more deaths!
+        confirmed > confirmed2 ? confirmed - confirmed2 : confirmed2 - confirmed
+      } more confirmed cases, ${
+        active > active2 ? active - active2 : active2 - active
+      } more active cases and ${
+        deaths > deaths2 ? deaths - deaths2 : deaths2 - deaths
+      } more deaths!
     
     `;
+    } else return 'Please select countries!';
   }
+
   return (
     <div className="compare-results">
       <div className="compare-country-summary">
